@@ -5,6 +5,8 @@
  */
 package demogui;
 
+import demogui.PanelQuanLi.pnKhachHang;
+import demogui.PanelQuanLi.pnKhuyenMai;
 import demogui.PanelQuanLi.pnNhanVien;
 import demogui.PanelQuanLi.pnTaiKhoan;
 import demogui.PanelQuanLi.pnThongKe;
@@ -20,6 +22,9 @@ public class QuanLi extends JFrame{
     pnThongKe tabThongKe;
     pnNhanVien tabNhanVien;
     pnTaiKhoan tabTaiKhoan;
+    pnKhachHang tabKhachHang;
+    pnKhuyenMai tabKhuyenMai;
+    
     
     public QuanLi(){
         initComponents();
@@ -35,10 +40,14 @@ public class QuanLi extends JFrame{
         tabThongKe = new pnThongKe();
         tabNhanVien = new pnNhanVien();
         tabTaiKhoan = new pnTaiKhoan();
+        tabKhachHang = new pnKhachHang();
+        tabKhuyenMai = new pnKhuyenMai();
         
         tabPane.addTab("Thống Kê", tabThongKe);
         tabPane.addTab("Nhân Viên", tabNhanVien);
         tabPane.addTab("Tài Khoản", tabTaiKhoan);
+        tabPane.addTab("Khách hàng",tabKhachHang);
+        tabPane.addTab("Khuyến mãi",tabKhuyenMai);
         
         add(tabPane);
     }
