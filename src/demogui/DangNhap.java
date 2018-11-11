@@ -28,7 +28,16 @@ public class DangNhap extends JFrame implements ActionListener{
     private JTextField tfTaiKhoan;
     
     public DangNhap(){
-        
+        initComponents();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+
+            
+    }
+    
+    private void initComponents() {
         lblTaiKhoan = new javax.swing.JLabel();
         tfTaiKhoan = new javax.swing.JTextField();
         lblMatKhau = new javax.swing.JLabel();
@@ -70,12 +79,6 @@ public class DangNhap extends JFrame implements ActionListener{
         add(btnThoat);
         add(lblTinhTrang);
         setLocationRelativeTo(null);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-
-            
     }
     
 }

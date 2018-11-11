@@ -49,7 +49,25 @@ public class BanHang extends JFrame implements ActionListener, FocusListener {
     private JLabel lblSoLuongCo1, lblSoLuongCo2;
     
     public BanHang(){
-        
+        initComponents();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void focusGained(FocusEvent fe) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void focusLost(FocusEvent fe) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void initComponents() {
         setSize(900,550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -64,20 +82,20 @@ public class BanHang extends JFrame implements ActionListener, FocusListener {
         tfNhapSP.setBounds(20,10,300,25);
         tfNhapSP.addFocusListener(new FocusListener(){
         @Override
-    public void focusGained(FocusEvent fe) {
-        if (tfNhapSP.getText().equals(" Nhập mã sản phẩm cần tìm")) {
-            tfNhapSP.setText("");
-            tfNhapSP.setForeground(Color.BLACK);
-        }
-    }
-    @Override
-    public void focusLost(FocusEvent fe) {
-        if (tfNhapSP.getText().isEmpty()) {
-            tfNhapSP.setForeground(Color.GRAY);
-            tfNhapSP.setText(" Nhập mã sản phẩm cần tìm");
-        }
-    }
-    });
+            public void focusGained(FocusEvent fe) {
+                if (tfNhapSP.getText().equals(" Nhập mã sản phẩm cần tìm")) {
+                    tfNhapSP.setText("");
+                    tfNhapSP.setForeground(Color.BLACK);
+                }
+            }
+            @Override
+            public void focusLost(FocusEvent fe) {
+                if (tfNhapSP.getText().isEmpty()) {
+                    tfNhapSP.setForeground(Color.GRAY);
+                    tfNhapSP.setText(" Nhập mã sản phẩm cần tìm");
+                }
+            }
+        });
         
         btnTim = new JButton();
         Icon timIcon = new ImageIcon("src/GUI/image/Search.png");
@@ -148,8 +166,6 @@ public class BanHang extends JFrame implements ActionListener, FocusListener {
         btnThanhToan = new JButton("Thanh toán");
         btnThanhToan.setBounds(750,380,100,25);
         
-        
-        
         pBanHang.add(tfNhapSP);
         pBanHang.add(btnTim);
         pBanHang.add(pThongTin);
@@ -164,24 +180,7 @@ public class BanHang extends JFrame implements ActionListener, FocusListener {
         pBaoHanh =new JPanel();
         tapPane.addTab("Bảo hành",null, pBaoHanh);
         
-        
-        
         add(tapPane,BorderLayout.CENTER);
         setLocationRelativeTo(null);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void focusGained(FocusEvent fe) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void focusLost(FocusEvent fe) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

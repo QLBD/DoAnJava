@@ -38,7 +38,10 @@ public class ThanhToan extends JFrame {
     
     
     public ThanhToan(){
-        
+        initComponents();
+    }
+
+    private void initComponents() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         setLayout(null);
         setSize(650,640);
@@ -115,8 +118,6 @@ public class ThanhToan extends JFrame {
         add(btnHuy);
         add(btnThanhToan);
         setLocationRelativeTo(null);
-        
-        
     }
     
 }
